@@ -26,3 +26,5 @@ src/Makefile
 src/Makefile.in
 src/stamp-h1
 
+# IDE files
+.idea
