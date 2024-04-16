@@ -1,5 +1,9 @@
-# Tested on Debian 12 (Bookworm).
-sudo apt install git build-essential libldns-dev libpcap-dev automake autoconf
+# Tested on Macbook Pro 2023 running Sonoma 14.4.1
+brew install automake autoconf ldns jansson openssl
+export LDFLAGS="-L$(brew --prefix openssl)/lib $LDFLAGS"
+export CPPFLAGS="-I$(brew --prefix openssl)/include $CPPFLAGS"
+export LDFLAGS="-L$(brew --prefix ldns)/lib $LDFLAGS"
+export CPPFLAGS="-I$(brew --prefix ldns)/include $CPPFLAGS"
 autoreconf --install
 ./configure
 make
