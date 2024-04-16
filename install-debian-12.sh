@@ -2,7 +2,8 @@
 sudo apt install git build-essential libldns-dev libpcap-dev automake autoconf
 autoreconf --install
 ./configure
-make
+# This installs binary to /usr/local/bin/passivedns
+make install
 # To run in daemon mode:
 # passivedns -i ens5 -l /var/log/passivedns.log -D
 # And test using something like curl www.example.com:
